@@ -1,0 +1,393 @@
+﻿/* =========================================
+   BASIC PAGE
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #eee6d8;
+    color: #30302d;
+}
+
+
+/* =========================================
+   MAIN CENTERED CONTAINER
+   ========================================= */
+
+.page {
+    width: 94%;
+    max-width: 1450px;
+    margin: 25px auto;
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.header {
+    width: 100%;
+    min-height: 60px;
+    background-color: #3d3b36;
+    color: #f7f0e4;
+    padding: 18px 25px;
+    border-left: 6px solid #c76b4a;
+    border-radius: 5px;
+    margin-bottom: 18px;
+}
+
+    .header h1 {
+        display: inline-block;
+        margin: 0;
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+.user-area {
+    float: right;
+    margin-top: 3px;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   COMMON SECTION
+   ========================================= */
+
+.section {
+    width: 100%;
+    background-color: #faf8f2;
+    border: 1px solid #d7cec0;
+    border-radius: 5px;
+    padding: 25px 30px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 6px rgba(70, 60, 45, 0.08);
+}
+
+    .section h2 {
+        margin: 0 0 18px 0;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #d8cec0;
+        color: #514c43;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+
+/* =========================================
+   CALENDAR
+   ========================================= */
+
+#academicCalendar {
+    width: 100% !important;
+    border-collapse: collapse;
+    background-color: #fffdf8;
+    border: 1px solid #cfc4b4;
+}
+
+    #academicCalendar td,
+    #academicCalendar th {
+        padding: 11px;
+        text-align: center;
+        border: 1px solid #ddd3c4;
+    }
+
+    #academicCalendar th {
+        background-color: #e4d6c5;
+        color: #48433b;
+        font-weight: 600;
+    }
+
+    #academicCalendar a {
+        color: #4f4940;
+        text-decoration: none;
+    }
+
+        #academicCalendar a:hover {
+            color: #c76b4a;
+        }
+
+
+/* =========================================
+   FORM
+   ========================================= */
+
+.form-row {
+    width: 100%;
+    margin-bottom: 17px;
+    display: flex;
+    align-items: flex-start;
+}
+
+    .form-row label {
+        width: 170px;
+        padding-top: 8px;
+        font-weight: 500;
+        color: #4a463f;
+        flex-shrink: 0;
+    }
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+select {
+    width: 380px;
+    padding: 10px;
+    border: 1px solid #bdb3a4;
+    border-radius: 3px;
+    background-color: #fffdf8;
+    color: #333;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+textarea {
+    width: 550px;
+    height: 105px;
+    padding: 10px;
+    border: 1px solid #bdb3a4;
+    border-radius: 3px;
+    background-color: #fffdf8;
+    font-family: inherit;
+    font-size: 14px;
+    resize: vertical;
+}
+
+    input[type="text"]:focus,
+    input[type="password"]:focus,
+    input[type="date"]:focus,
+    select:focus,
+    textarea:focus {
+        outline: none;
+        border-color: #c76b4a;
+        box-shadow: 0 0 0 2px rgba(199, 107, 74, 0.10);
+    }
+
+
+/* =========================================
+   BUTTON
+   ========================================= */
+
+.button {
+    padding: 10px 20px;
+    background-color: #c76b4a;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+    .button:hover {
+        background-color: #ad583a;
+    }
+
+.small-button {
+    padding: 6px 13px;
+    margin-left: 5px;
+}
+
+
+/* =========================================
+   MESSAGE
+   ========================================= */
+
+.message {
+    display: block;
+    margin-top: 12px;
+    font-weight: 600;
+    color: #4c6b50;
+}
+
+.note {
+    color: #716b61;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   LEAVE TABLE
+   ========================================= */
+
+.leave-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fffdf8;
+}
+
+    .leave-table th,
+    .leave-table td {
+        border: 1px solid #d4cabb;
+        padding: 12px 10px;
+        text-align: left;
+        vertical-align: top;
+    }
+
+    .leave-table th {
+        background-color: #e4d6c5;
+        color: #48433b;
+        font-weight: 600;
+    }
+
+    .leave-table tr:nth-child(even) {
+        background-color: #f6f1e8;
+    }
+
+
+/* =========================================
+   LOGIN PAGE
+   ========================================= */
+
+.login-box {
+    width: 600px;
+    min-height: 390px;
+    margin: 80px auto;
+    padding: 45px;
+    background-color: #faf8f2;
+    border: 1px solid #d3c7b7;
+    border-top: 7px solid #c76b4a;
+    border-radius: 5px;
+    box-shadow: 0 5px 18px rgba(65, 55, 40, 0.12);
+}
+
+    .login-box h2 {
+        margin: 0 0 8px 0;
+        color: #3d3b36;
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    .login-box p {
+        color: #716b61;
+        margin-bottom: 30px;
+    }
+
+    .login-box .form-row {
+        margin-bottom: 25px;
+    }
+
+        .login-box .form-row label {
+            width: 120px;
+        }
+
+    .login-box input[type="text"],
+    .login-box input[type="password"] {
+        width: 380px;
+        padding: 11px;
+        font-size: 15px;
+    }
+
+    .login-box .button {
+        padding: 10px 28px;
+        font-size: 15px;
+    }
+
+
+/* =========================================
+   LARGE SCREENS
+   ========================================= */
+
+@media (min-width: 1600px) {
+
+    .page {
+        width: 92%;
+        max-width: 1550px;
+    }
+
+    .section {
+        padding: 28px 35px;
+    }
+
+    .header {
+        padding: 20px 30px;
+    }
+
+    .form-row label {
+        width: 190px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="date"],
+    select {
+        width: 420px;
+    }
+
+    textarea {
+        width: 650px;
+    }
+}
+
+
+/* =========================================
+   SMALL SCREENS
+   ========================================= */
+
+@media (max-width: 800px) {
+
+    .page {
+        width: 96%;
+        margin: 10px auto;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .user-area {
+        float: none;
+        margin-top: 10px;
+    }
+
+    .section {
+        padding: 18px;
+    }
+
+    .form-row {
+        display: block;
+    }
+
+        .form-row label {
+            display: block;
+            width: 100%;
+            margin-bottom: 5px;
+        }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="date"],
+    select,
+    textarea {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .login-box {
+        width: 94%;
+        padding: 30px;
+    }
+
+        .login-box .form-row label {
+            width: 100%;
+        }
+
+        .login-box input[type="text"],
+        .login-box input[type="password"] {
+            width: 100%;
+        }
+
+    .leave-table {
+        font-size: 13px;
+    }
+}
