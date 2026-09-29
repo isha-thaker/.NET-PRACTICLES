@@ -1,0 +1,54 @@
+﻿@model ProductCatalog.Models.Product
+
+@{
+    ViewBag.Title = "Delete Product";
+}
+
+<div class="container">
+    <h2>Delete Product</h2>
+
+    <div class="alert alert-warning">
+        <strong>Are you sure?</strong>
+        This product will be removed from the catalog.
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <p>
+                <strong>Product:</strong>
+                @Model.ProductName
+            </p>
+
+            <p>
+                <strong>Category:</strong>
+                @Model.Category
+            </p>
+
+            <p>
+                <strong>Price:</strong>
+                ₹@Model.Price
+            </p>
+        </div>
+    </div>
+
+    @using (Html.BeginForm("DeleteConfirmed", "Product", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        @Html.HiddenFor(model => model.ProductId)
+
+        <button type="submit" class="btn btn-danger">
+            Delete Product
+        </button>
+
+        @Html.ActionLink(
+            "Cancel",
+            "Index",
+            "Product",
+            null,
+            new { @class = "btn btn-default" }
+        )
+    }
+</div>
+
+

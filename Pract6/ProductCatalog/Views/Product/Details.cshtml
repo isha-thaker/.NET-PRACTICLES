@@ -1,0 +1,41 @@
+﻿@model ProductCatalog.Models.Product
+
+@{
+    ViewBag.Title = "Product Details";
+}
+<div class="container">
+    <h2>Product Details</h2>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3>@Model.ProductName</h3>
+        </div>
+        <div class="panel-body">
+            <p>
+                <strong>Product ID:</strong>
+                @Model.ProductId
+            </p>
+            <p>
+                <strong>Category:</strong>
+                @Model.Category
+            </p>
+            <p>
+                <strong>Price:</strong>
+                ₹@Model.Price
+            </p>
+            <p>
+                <strong>Description:</strong>
+                @Model.Description
+            </p>
+        </div>
+    </div>
+    @Html.ActionLink(
+        "Back to Products",
+        "Index",
+        "Product",
+        null,
+        new { @class = "btn btn-default" }
+    )
+</div>
+
+

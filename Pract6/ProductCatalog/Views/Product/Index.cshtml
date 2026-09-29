@@ -1,0 +1,63 @@
+﻿@model IEnumerable<ProductCatalog.Models.Product>
+@{
+    ViewBag.Title = "Product Catalog";
+}
+<div class="container">
+    <h2>Product Catalog</h2>
+    <p>
+        @Html.ActionLink(
+            "Add New Product",
+            "Create",
+            "Product",
+            null,
+            new { @class = "add-product" }
+        )
+    </p>
+    <div class="row">
+        @foreach (var product in Model)
+        {
+            <div class="col-md-4">
+                <div class="product-card">
+                    <h4>@product.ProductName</h4>
+                    <p>
+                        <strong>Category:</strong>
+                        @product.Category
+                    </p>
+                    <p>
+                        <strong>Price:</strong>
+                        ₹@product.Price
+                    </p>
+                    <p>
+                        @product.Description
+                    </p>
+                    <div>
+                        @Html.ActionLink(
+                            "View Details",
+                            "Details",
+                            "Product",
+                            new { id = product.ProductId },
+                            new { @class = "btn btn-info" }
+                        )
+
+                        @Html.ActionLink(
+                            "Edit",
+                            "Edit",
+                            "Product",
+                            new { id = product.ProductId },
+                            new { @class = "btn btn-warning" }
+                        )
+                        @Html.ActionLink(
+                            "Delete",
+                            "Delete",
+                            "Product",
+                            new { id = product.ProductId },
+                            new { @class = "btn btn-danger" }
+                      )
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
